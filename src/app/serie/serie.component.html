@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Series</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="serie.component.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="my-4 d-flex align-items-center">
+      <h1>TV Series</h1>
+    </header>
+
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Channel</th>
+            <th class="h4">Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of series">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.channel}}</td>
+            <td>{{c.seasons}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="promedio-temporadas" class="text-left font-weight-bold mt-4">
+      {{ promedioTemporadas }}
+    </p>
+  <script type="module" src="./scripts/main.js"></script>
+  </div>
+</body>
+</html>
